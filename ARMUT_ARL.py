@@ -93,10 +93,6 @@ rules = association_rules(apriori_df,                #birlikte görülme kuralla
                           metric="support",
                           min_threshold=0.01)
 
-#support(x,y) = sup(x).sup(y)  (bağımsızlık / independence)
-#lift(x,y) =  support(x,y) / sup(x).sup(y)
-#leverage(x,y) = support(x,y) - sup(x).sup(y)
-
 
 # Adım 3: arl_recommender fonksiyonunu kullanarak en son 2_0 hizmetini alan bir kullanıcıya hizmet önerisinde bulununuz.
 sorted_rules = rules.sort_values("lift", ascending=False)
